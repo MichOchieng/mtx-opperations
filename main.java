@@ -8,19 +8,21 @@ public class main{
         q1 x = new q1(arrSm);
         q1 y = new q1(arrMd);
         q1 z = new q1(arrLg);
-        System.out.println("Small array: Row");
-        x.rowInit();
-        System.out.println("Medium array: Row");
-        y.rowInit();
-        System.out.println("Large array: Row");
-        z.rowInit();
+        q2 w = new q2();
+        q2.cmtx();
+        // System.out.println("Small array: Row");
+        // x.rowInit();
+        // System.out.println("Medium array: Row");
+        // y.rowInit();
+        // System.out.println("Large array: Row");
+        // z.rowInit();
 
-        System.out.println("Small array: Column");
-        x.colInit();
-        System.out.println("Medium array: Column");
-        y.colInit();
-        System.out.println("Large array: Column");
-        z.colInit();
+        // System.out.println("Small array: Column");
+        // x.colInit();
+        // System.out.println("Medium array: Column");
+        // y.colInit();
+        // System.out.println("Large array: Column");
+        // z.colInit();
         
     }
 }
