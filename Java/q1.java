@@ -8,39 +8,39 @@ public class q1{
        this.x = x;
     }
 
-    protected void rowInit(){
+    public void rowTest(){
+        rowInit();
+    }
+
+    public void columnTest(){
+        colInit();
+    }
+
+    private void rowInit(){
         int n = x.length;        
         Random r = new Random();
-        long start = System.nanoTime();        
-        // start timer
+        long start = System.currentTimeMillis();       
         for(int i = 0;i<n;i++){
             for(int j = 0; j<n; j++){
                 x[i][j] = r.nextDouble();
             }            
         }
-        long finish = System.nanoTime();       
-        System.out.println("Total time: " + (finish-start) + "ns.");
+        long finish = System.currentTimeMillis();       
+        System.out.println(" Total time: " + (finish-start) + "ms.");
     }
 
-    protected void colInit(){
+    private void colInit(){
         int n = x.length;
         Random r = new Random();
+        long start = System.currentTimeMillis();  
         for(int i = 0;i<n;i++){
             for(int j = 0; j<n; j++){
                 x[j][i] = r.nextDouble();
             }            
         }
+        long finish = System.currentTimeMillis();   
+        System.out.println(" Total time: " + (finish-start) + "ms.");
     }
 
-    protected void view(){
-        int n = x.length;
-        Random r = new Random();
-        for(int i = 0;i<n;i++){
-            for(int j = 0; j<n; j++){
-                System.out.print(x[i][j]  + " ");
-            }
-            System.out.println();
-        }
-    }
 
 }
