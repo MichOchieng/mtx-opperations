@@ -12,34 +12,31 @@ public class q2{
     public void cTest(){
         cInit();
         view();
-        cStore();        
+              
     }
 
     private void cInit(){
         int n = x.length;  
         int y = 1;      
-        Random r = new Random();
-        long start = System.currentTimeMillis();            
+        Random r = new Random();                  
         for(int i = 0;i<n;i++){
             for(int j = 0; j<n; j++){
                 if(i==0 || j ==0 || i ==n-1){
+                    // Change to r.nextDouble();
                     x[i][j] = y;
                     y++;
                 }
             }            
-        }
-        long finish = System.currentTimeMillis();       
-        System.out.println(" Total time: " + (finish-start) + "ms.");
+        }          
+        
     }
 
-    private void cStore(){
-        int size = (x.length * 2) + (x.length - 2);  
-        double r[] = new double [size];
+    private void cStore(double result[]){      
         int n = x.length;
         int k = 1;        
         for(int i = 0;i<n;i++){
             for(int j = 0; j<n; j++){                       
-                r[j] = x[0][j];          
+                result[j] = x[0][j];          
                 if(j==0){
                     r[n+i] = x[k][0];  
                 }       
@@ -48,7 +45,7 @@ public class q2{
                     int m = (r.length -1)-j;
                     int w = (n-1)-(p-1);
                     if (j>0) {
-                        r[m+1] = x[i][w];
+                        result[m+1] = x[i][w];
                     }
                 }                
             }
@@ -57,7 +54,7 @@ public class q2{
             }            
         }        
         for(int i = 0;i<r.length;i++){
-            System.out.println(r[i]);
+            System.out.println(result[i]);
         }
     }
 
