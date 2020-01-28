@@ -5,6 +5,11 @@ public class main{
         double arrSm[][] = new double[4000][4000];         
         double arrMd[][] = new double[8000][8000]; 
         double arrLg[][] = new double[16000][16000]; 
+        double cArr[][] = new double[1000][1000]; ;
+        int size = (cArr.length * 2) + (cArr.length - 2);  
+        double cResult[] = new double[size];
+
+        // QUESTION 1
 
         q1 x = new q1(arrSm);
         q1 y = new q1(arrMd);
@@ -23,6 +28,8 @@ public class main{
         // y.columnTest();
         // System.out.println("Large array: Column");
         // z.columnTest();
+
+        // QUESTION 2
         
     }
 }
