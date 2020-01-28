@@ -29,17 +29,20 @@ public class q2{
             }            
         }          
         
-    }
+    }  
 
     private void cStore(double result[]){      
         int n = x.length;
         int k = 1;        
         for(int i = 0;i<n;i++){
-            for(int j = 0; j<n; j++){                       
-                result[j] = x[0][j];          
+            for(int j = 0; j<n; j++){   
+                // Places everything in the first row of x in at the start of r                    
+                result[j] = x[0][j];
+                // Adds mid section of the non zero elements           
                 if(j==0){
                     r[n+i] = x[k][0];  
                 }       
+                // Fills in the rest of r backwards 
                 else if(i==n-1){
                     int p = j;
                     int m = (r.length -1)-j;
@@ -49,10 +52,11 @@ public class q2{
                     }
                 }                
             }
+            // Compensates for overlap when adding mid section of non zero elements
             if(k<5){
                 k++;                    
             }            
-        }        
+        } // Prints out the result array         
         for(int i = 0;i<r.length;i++){
             System.out.println(result[i]);
         }
